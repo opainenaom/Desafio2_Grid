@@ -1,0 +1,119 @@
+body {
+    font-family: 'Arial', sans-serif; 
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 0.5fr 3fr; /* Ajusta las proporciones según el espacio al sidebar y al main */
+    grid-template-rows: auto 1fr auto;
+    gap: 10px; /* Añade un espacio entre las áreas del layout */    
+    background-color: rgba(236, 226, 226, 0.822);
+    padding: 5px; 
+}
+
+.header {
+    grid-area: header;
+    background-color: #032791;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: rgba(236, 226, 226, 0.822) ;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.main-content {
+    grid-area: main;
+    padding: 15px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 1px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-rows: repeat(0.5, 1fr);    /* 2 filas */
+    gap: 10px; /* Espacio entre los elementos */
+    column-gap: 10px; /* Espacio entre columnas */
+    row-gap: 20px;
+    /*align-items: center; 
+    justify-items: center; */
+    
+    justify-items: stretch;     
+}
+
+.product-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    text-align: center;
+    object-fit: cover;
+    transition: box-shadow 0.3s ease; /* Añade una transición suave */
+    /*height: 100%;
+    width: 100%; */
+}
+
+.product-card img {
+    width: 100%;      /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+    height: auto;     /* Ajusta la altura de las imágenes automáticamente */    
+    object-fit: cover; /* Ajusta la imagen para llenar el área sin distorsión */
+    display: block;
+    
+}
+
+.product-card button {
+    background-color: #032791;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: auto;   /* Empuja el botón hacia abajo */
+    width: 100%;
+}
+
+.product-card h3 {
+    padding: 1px;
+    cursor: pointer;
+    margin-top: auto;   /* Empuja el botón hacia abajo */
+    width: 100%;
+}
+
+.product-card img:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la imagen al pasar el cursor */
+}
+
+
+ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+ul li a {
+    text-decoration: none; /* Opcional: elimina el subrayado de los enlaces */
+    
+}
